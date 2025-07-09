@@ -150,6 +150,7 @@
             position: relative;
             overflow: hidden;
             height: 64px;
+            width: 64px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -201,12 +202,12 @@
             background: #9ca3af;
         }
 
-        .btn.operator {
+        .btn.operator,.wide {
             background: #f97316;
             color: #fff;
         }
 
-        .btn.operator:hover {
+        .btn.operator:hover,.wide:hover {
             background: #ea580c;
         }
 
@@ -215,8 +216,21 @@
             color: #f97316;
         }
 
-        .btn.wide {
-            grid-column: span 2;
+        .wide {
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            outline: none;
+            position: relative;
+            overflow: hidden;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-column: span 2 !important;
             border-radius: 32px;
         }
 
@@ -333,7 +347,7 @@
             <!-- Row 6 -->
             <button class="btn function" onclick="toggleSign()">+/-</button>
             <button class="btn function" onclick="percentage()">%</button>
-            <button class="btn operator wide" onclick="calculate()">=</button>
+            <button class="operator wide" onclick="calculate()">=</button>
         </div>
     </div>
 
